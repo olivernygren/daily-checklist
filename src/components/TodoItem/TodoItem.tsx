@@ -8,8 +8,9 @@ import {
 import { Supplement } from '../../utils';
 
 import useStyles from './styles';
+import { ITodoItem } from '../../types';
 
-export const TodoItem = () => {
+export const TodoItem = ({ title, category: { name, icon } }: ITodoItem) => {
 	const classes = useStyles();
 
 	return (
@@ -18,10 +19,11 @@ export const TodoItem = () => {
 				<Checkbox className={classes.checkbox} />
 			</ListItemIcon>
 			<ListItemText>
-				<Typography variant="subtitle1">Magnesium</Typography>
-				<Typography variant="body2">Kosttillskott</Typography>
+				<Typography variant="subtitle1">{title}</Typography>
+				<Typography variant="body2">{name}</Typography>
 			</ListItemText>
-			<Supplement className={classes.categoryIcon} />
+			{/* <Supplement className={classes.categoryIcon} /> */}
+			{icon}
 		</ListItem>
 	);
 };
