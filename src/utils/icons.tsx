@@ -4,6 +4,7 @@ import home from '../icons/home.svg';
 import meat from '../icons/meat.svg';
 import pan from '../icons/pan.svg';
 import pill from '../icons/pill.svg';
+import qm from '../icons/qm.svg';
 import scale from '../icons/scale.svg';
 import steps from '../icons/steps.svg';
 import textLogo from '../icons/text-logo.svg';
@@ -40,4 +41,7 @@ export const TextLogo = ({ className }: IIcon) => {
 };
 export const Workout = ({ className }: IIcon) => {
 	return <img src={workout} alt={'Träning'} className={className} />;
+};
+export const QuestionMark = ({ className }: IIcon) => {
+	return <img src={qm} alt={'Träning'} className={className} />;
 };
