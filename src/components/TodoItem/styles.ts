@@ -16,11 +16,15 @@ export default makeStyles((theme) => ({
 	},
 	checkbox: {
 		'&.MuiCheckbox-colorSecondary.Mui-checked': {
-			color: theme.palette.primary.main,
+			color: theme.palette.success.main,
 		},
 	},
-	categoryIcon: {
-		paddingTop: 7,
-		paddingRight: 4,
+	closeIcon: {
+		paddingTop: 2,
+		paddingLeft: 14,
+	},
+	todoTitle: {
+		display: 'flex',
+		alignItems: 'center',
 	},
 }));

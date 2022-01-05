@@ -13,30 +13,29 @@ import {
 } from '.';
 
 import useStyles from '../components/TodoItem/styles';
+// const classes = useStyles();
 
-export const GetIcon = (category: string) => {
-	const classes = useStyles();
-
+export function GetIcon(category: string) {
 	switch (category) {
 		case categoryEnum.CALORIES:
-			return <Calories className={classes.categoryIcon} />;
+			return <Calories />;
 		case categoryEnum.FRUIT:
-			return <Fruit className={classes.categoryIcon} />;
+			return <Fruit />;
 		case categoryEnum.HOUSEHOLD:
-			return <Home className={classes.categoryIcon} />;
+			return <Home />;
 		case categoryEnum.MEAL_PREP:
-			return <MealPrep className={classes.categoryIcon} />;
+			return <MealPrep />;
 		case categoryEnum.PROTEIN:
-			return <Protein className={classes.categoryIcon} />;
+			return <Protein />;
 		case categoryEnum.STEPS:
-			return <Steps className={classes.categoryIcon} />;
+			return <Steps />;
 		case categoryEnum.SUPPLEMENTS:
-			return <Supplement className={classes.categoryIcon} />;
+			return <Supplement />;
 		case categoryEnum.WEIGHT:
-			return <Weight className={classes.categoryIcon} />;
+			return <Weight />;
 		case categoryEnum.WORKOUT:
-			return <Workout className={classes.categoryIcon} />;
+			return <Workout />;
 		default:
-			return <QuestionMark className={classes.categoryIcon} />;
+			return <QuestionMark />;
 	}
-};
+}

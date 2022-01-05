@@ -1,5 +1,6 @@
 import {
 	Checkbox,
+	IconButton,
 	ListItem,
 	ListItemIcon,
 	ListItemText,
@@ -9,8 +10,14 @@ import { Supplement } from '../../utils';
 
 import useStyles from './styles';
 import { ITodoItem } from '../../types';
+import { CloseRounded } from '@material-ui/icons';
+import { todoData } from '../../data';
 
-export const TodoItem = ({ title, category: { name, icon } }: ITodoItem) => {
+export const TodoItem = ({
+	title,
+	category: { name, icon },
+	handleDelete,
+}: ITodoItem) => {
 	const classes = useStyles();
 
 	return (
@@ -19,11 +26,17 @@ export const TodoItem = ({ title, category: { name, icon } }: ITodoItem) => {
 				<Checkbox className={classes.checkbox} />
 			</ListItemIcon>
 			<ListItemText>
-				<Typography variant="subtitle1">{title}</Typography>
+				<Typography variant="subtitle1" className={classes.todoTitle}>
+					{title}
+					{icon}
+				</Typography>
 				<Typography variant="body2">{name}</Typography>
 			</ListItemText>
 			{/* <Supplement className={classes.categoryIcon} /> */}
-			{icon}
+			{/* {icon} */}
+			<IconButton onClick={handleDelete}>
+				<CloseRounded className={classes.closeIcon} />
+			</IconButton>
 		</ListItem>
 	);
 };

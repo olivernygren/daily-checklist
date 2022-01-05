@@ -1,5 +1,6 @@
 export interface IIcon {
 	className?: string;
+	mt?: boolean;
 }
 
 export interface ITodoItem {
@@ -8,4 +9,5 @@ export interface ITodoItem {
 		name: string;
 		icon: JSX.Element;
 	};
+	handleDelete: () => void;
 }
