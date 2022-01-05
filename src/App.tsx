@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 
 import { theme } from './theme';
-import logo from './logo.svg';
 import './App.css';
 import { ThemeProvider } from '@material-ui/core';
 import { routes } from './routes';
